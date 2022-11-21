@@ -1,0 +1,21 @@
+<nav>
+  <div class="nav-wrapper blue darken-3">
+    <a href="#!" class="brand-logo"> <img src="./assets/ico.png" alt="ico">HomeRun</a>
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fa-solid fa-bars"></i></a>
+    <ul class="right hide-on-med-and-down">
+      <li *ngIf="setSesion" ><a routerLink="/administracion/empleados">Empleados</a></li>
+      <li *ngIf="setSesion" ><a routerLink="/administracion/buscar-cliente">Clientes</a></li>
+      <li *ngIf="setSesion" ><a routerLink="/administracion">Administracion</a></li>
+      <li *ngIf="setSesion" ><a routerLink="/seguridad/cerrar-sesion">Cerrar sesion</a></li>
+      <li *ngIf="!setSesion" ><a routerLink="/seguridad/login">Login</a></li>
+    </ul>
+  </div>
+</nav>
+
+<ul class="sidenav blue darken-3" id="mobile-demo">
+  <li *ngIf="setSesion" ><a routerLink="/administracion/empleados">Empleados</a></li>
+  <li *ngIf="setSesion" ><a routerLink="/administracion/buscar-cliente">Clientes</a></li>
+  <li *ngIf="setSesion" ><a routerLink="/administracion">Administracion</a></li>
+  <li *ngIf="setSesion" ><a routerLink="/seguridad/cerrar-sesion">Cerrar sesion</a></li>
+  <li *ngIf="!setSesion" ><a routerLink="/seguridad/login">Login</a></li>
+</ul>

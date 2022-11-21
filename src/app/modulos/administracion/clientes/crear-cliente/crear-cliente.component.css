@@ -1,0 +1,22 @@
+.formstyle{
+    max-width: 450px;
+    padding: 3px 3px;
+    margin-top: 1rem;
+}
+.card-panel{
+    border-radius: 12px;
+    background-color: rgb(255, 255, 255);
+}
+input{
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+}
+button{
+    border-radius: 25px;
+    padding: 2px 2px;
+    font-weight: 600;
+}
+.card-panel h2{
+    font-family: 'Lobster', cursive;
+    color: rgb(1, 1, 161);
+}

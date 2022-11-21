@@ -1,0 +1,11 @@
+a{
+    margin: 2px 6px;
+    font-size: 20px;
+}
+.fa-trash{
+    color: red;
+}
+.btn{
+    border-radius: 12px;
+    margin: 5px 5px;
+}

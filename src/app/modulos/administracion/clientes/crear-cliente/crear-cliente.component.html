@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <div class="row m-b-none formstyle">
+      <form [formGroup]='fValidator' id="form-cliente" method="POST" (ngSubmit)="crearCliente()" class="card-panel" >
+          <h2 class="center-align ">Crear Cliente</h2>
+          <br>
+        <div class='input-field'>
+          <input formControlName="nombre" class='validate' type='text' name='nombre' id='nombre' />
+          <label for='nombre'>Ingresar nombre</label>
+        </div>
+
+        <div class='input-field'>
+          <input formControlName="fecha" class='validate' type='datetime-local' name='fecha' id='fecha' />
+          <label for='fecha'></label>
+        </div>
+
+        <div class='input-field'>
+          <input formControlName="telefono" class='validate' type='text' name='telefono' id='telefono' />
+          <label for='telefono'>Ingresar telefono</label>
+        </div>
+
+        <div class='input-field'>
+          <input formControlName="correo" class='validate' type='email' name='correo' id='correo' />
+          <label for='correo'>Ingresar correo</label>
+        </div>
+
+        <div>
+          <button [disabled]="!fValidator.valid" type="submit" class='col s6 btn waves-effect btn btn-large m-md green'>Crear</button>
+          <button routerLink="/administracion/buscar-cliente" type="button" class='col s6 btn waves-effect btn btn-large m-md red'>Cancelar</button>
+        </div>
+      </form>
+    </div>
+</div>

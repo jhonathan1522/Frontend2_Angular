@@ -1,0 +1,16 @@
+a{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+}
+a:hover{
+    color: black;
+    background-color: aliceblue;
+}
+.brand-logo{
+    margin-left: 2rem;
+    font-size: 2rem;
+    font-family: 'Rubik Distressed', cursive;
+}
+img{
+    margin: 0px 6px;
+}

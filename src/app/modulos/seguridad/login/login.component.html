@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row m-b-none ">
+      <form  [formGroup]="fValidator" id="form-login" method="post" (ngSubmit)="login()" class="card-panel grey lighten-4">
+        <h2 class="center-align">HomeRun</h2>
+        <br>
+        <div class='input-field'>
+          <input formControlName="usuario" class='validate' type='email' name='email' id='email' />
+          <label for='email'>Ingresar correo</label>
+        </div>
+        <div class='input-field col s12 padder-x'>
+          <input formControlName="clave" class='validate' type='password' name='password' id='password' />
+          <label for='password'>Ingresar clave</label>
+        </div>
+        <div>
+          <button [disabled]="!fValidator.valid" type="submit" class='col s12 btn waves-effect btn btn-large m-md green'>Login</button>
+        </div>
+        <div class="container center">
+            <label>
+                <h6><a class="grey-text lighten-4 forgotpassword" routerLink="seguridad/recuperar-clave" >Forgot Password?</a></h6>
+            </label>
+        </div>
+        <div class="container center">
+            <a routerLink="seguridad/login" class='btn waves-effect waves-light btn btn-large m-md indigo'>registrarse</a>
+        </div>
+      </form>
+    </div>
+</div>

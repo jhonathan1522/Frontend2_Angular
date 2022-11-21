@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row m-b-none formstyle">
+      <form [formGroup]='fValidator' id="form-cliente" method="POST" (ngSubmit)="eliminarCliente()" class="card-panel grey lighten-4" >
+        <h2 class="center-align ">Eliminar Cliente</h2>
+        <br>
+
+        <input type="hidden" formControlName="id" />
+
+        <div class='input-field'>
+          <input formControlName="nombre" class='validate' type='text' name='nombre' id='nombre' />
+          <label for='nombre' class="active">Ingresar nombre</label>
+        </div>
+
+        <div class='input-field'>
+          <input formControlName="telefono" class='validate' type='text' name='telefono' id='telefono' />
+          <label for='telefono' class="active">Ingresar telefono</label>
+        </div>
+
+        <div class='input-field'>
+          <input formControlName="correo" class='validate' type='email' name='correo' id='correo' />
+          <label for='correo' class="active">Ingresar correo</label>
+        </div>
+
+        <div>
+          <button [disabled]="!fValidator.valid" type="submit" class='col s6 btn waves-effect btn btn-large m-md red'>Eliminar</button>
+          <button routerLink="/administracion/buscar-cliente" type="button" class='col s6 btn waves-effect btn btn-large m-md green'>Cancelar</button>
+        </div>
+      </form>
+    </div>
+</div>
+
