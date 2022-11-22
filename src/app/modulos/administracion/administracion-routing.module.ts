@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ValidadorSesionGuard } from 'src/app/guardianes/validador-sesion.guard';
+import { ValidadorSesionGuard } from 'src/app/guards/validador-sesion.guard';
 import { BuscarClienteComponent } from './clientes/buscar-cliente/buscar-cliente.component';
 import { CrearClienteComponent } from './clientes/crear-cliente/crear-cliente.component';
 import { EditarClienteComponent } from './clientes/editar-cliente/editar-cliente.component';
