@@ -13,7 +13,7 @@ export class ClienteService {
   token: String='';
 
 
-  constructor( private http:HttpClient, private servicioAutenticacion:AutenticacionService) {  
+  constructor( private http:HttpClient, private servicioAutenticacion:AutenticacionService) {
     this.token=servicioAutenticacion.obtenerToken();
   }
 
@@ -26,9 +26,9 @@ export class ClienteService {
   }
 
 
-  
+
   crearCliente(cliente:Modelcliente):Observable<Modelcliente>{
-    return this.http.post<Modelcliente>( 
+    return this.http.post<Modelcliente>(
       `${this.url}/clientes`,
       cliente,
       {
@@ -39,7 +39,7 @@ export class ClienteService {
   }
 
   editarCliente(cliente:Modelcliente):Observable<Modelcliente>{
-    return this.http.put<Modelcliente>( 
+    return this.http.put<Modelcliente>(
       `${this.url}/clientes/${cliente.id}`,
       cliente,
       {
@@ -50,13 +50,13 @@ export class ClienteService {
   }
 
   eliminarCliente(id:string ):Observable<any>{
-    return this.http.delete( 
+    return this.http.delete(
       `${this.url}/clientes/${id}`,
       {
         headers: new HttpHeaders({
         'Authorization':`Bearer ${this.token}`
       })
     })
-  }  
+  }
 
 }

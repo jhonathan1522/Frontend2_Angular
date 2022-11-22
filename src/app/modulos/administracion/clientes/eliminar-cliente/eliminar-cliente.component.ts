@@ -36,9 +36,9 @@ export class EliminarClienteComponent implements OnInit {
       {
         next: (v) => {
           this.fValidator.controls["id"].setValue(this.id);
-          this.fValidator.controls["nombre"].setValue(v.nombre);
-          this.fValidator.controls["telefono"].setValue(v.telefono);
-          this.fValidator.controls["correo"].setValue(v.correo);
+          this.fValidator.controls["nombre"].setValue(v.Nombre);
+          this.fValidator.controls["telefono"].setValue(v.Telefono);
+          this.fValidator.controls["correo"].setValue(v.Email);
           console.log(v);
           //this.router.navigate(["/administracion/buscar-cliente"]);
         },

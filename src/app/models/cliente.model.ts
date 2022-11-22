@@ -1,9 +1,9 @@
 
 export class Modelcliente{
     id?: String;
-    nombre?: String;
-    fecha?: String;
-    telefono?: String;
-    correo?: String;
-    clave?: String;
+    Nombre?: String;
+    Fecha_nacimiento?: String;
+    Telefono?: String;
+    Email?: String;
+    Clave?: String;
 }

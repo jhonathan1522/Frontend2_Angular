@@ -39,11 +39,11 @@ export class EditarClienteComponent implements OnInit {
       {
         next: (v) => {
           this.fValidator.controls["id"].setValue(this.id);
-          this.fValidator.controls["clave"].setValue(v.clave);
-          this.fValidator.controls["nombre"].setValue(v.nombre);
+          this.fValidator.controls["clave"].setValue(v.Clave);
+          this.fValidator.controls["nombre"].setValue(v.Nombre);
           this.fValidator.controls["fecha"].setValue('2022-11-18T19:55');
-          this.fValidator.controls["telefono"].setValue(v.telefono);
-          this.fValidator.controls["correo"].setValue(v.correo);
+          this.fValidator.controls["telefono"].setValue(v.Telefono);
+          this.fValidator.controls["correo"].setValue(v.Email);
           console.log(v);
           //this.router.navigate(["/administracion/buscar-cliente"]);
         },
@@ -65,13 +65,13 @@ export class EditarClienteComponent implements OnInit {
     let telefono = this.fValidator.controls["telefono"].value;
     let correo = this.fValidator.controls["correo"].value;
     let cliente = new Modelcliente();
-    cliente.nombre = nombre;
-    cliente.fecha = '2022-11-16T03:55:19.473Z';
-    cliente.telefono = telefono;
-    cliente.correo = correo;
-    
+    cliente.Nombre = nombre;
+    cliente.Fecha_nacimiento = '2022-11-16T03:55:19.473Z';
+    cliente.Telefono = telefono;
+    cliente.Email = correo;
+
     cliente.id=this.id;
-    cliente.clave=clave;
+    cliente.Clave=clave;
 
     this.clienteServicio.editarCliente(cliente).subscribe(
       {

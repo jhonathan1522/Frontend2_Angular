@@ -2,7 +2,7 @@
     <div>
         <a routerLink="/administracion/crear-cliente" class="btn green">
             <i class="fa-solid fa-user-plus"></i>
-        Agregrar Cliente </a>   
+        Agregrar Cliente </a>
     </div>
     <div class="card ">
     <table class="table responsive">
@@ -15,13 +15,13 @@
               <th>Opciones</th>
           </tr>
         </thead>
-    
+
         <tbody>
             <tr *ngFor="let c of ListaClientes" >
-                <th>{{ c.nombre}}</th>
-                <th>{{ c.fecha}}</th>
-                <th>{{ c.telefono}}</th>
-                <th>{{ c.correo}}</th>
+                <td>{{ c.Nombre}}</td>
+                <td>{{ c.Fecha_nacimiento}}</td>
+                <td>{{ c.Telefono}}</td>
+                <td>{{ c.Email}}</td>
                 <th>
                     <a routerLink="/administracion/editar-cliente/{{c.id}}">
                         <i class="fa-solid fa-pen-to-square"></i>
@@ -32,16 +32,7 @@
                 </th>
             </tr>
         </tbody>
-        <tfoot>
-            <tr>
-                <th>Nombre</th>
-                <th>Fecha</th>
-                <th>Telefono</th>
-                <th>Correo</th>
-                <th>Opciones</th>
-            </tr>           
-        </tfoot>
       </table>
-    
-</div>    
+
+</div>
 </div>

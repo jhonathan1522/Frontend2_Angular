@@ -35,10 +35,10 @@ export class CrearClienteComponent implements OnInit {
     let telefono = this.fValidator.controls["telefono"].value;
     let correo = this.fValidator.controls["correo"].value;
     let cliente = new Modelcliente();
-    cliente.nombre = nombre;
-    cliente.fecha = '2022-11-16T03:55:19.473Z';
-    cliente.telefono = telefono;
-    cliente.correo = correo;
+    cliente.Nombre = nombre;
+    cliente.Fecha_nacimiento = '2022-11-16T03:55:19.473Z';
+    cliente.Telefono = telefono;
+    cliente.Email = correo;
 
     this.clienteServicio.crearCliente(cliente).subscribe(
       {
