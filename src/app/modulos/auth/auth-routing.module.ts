@@ -4,11 +4,16 @@ import { CambioClaveComponent } from './cambio-clave/cambio-clave.component';
 import { CerrarSesionComponent } from './cerrar-sesion/cerrar-sesion.component';
 import { LoginComponent } from './login/login.component';
 import { RecuperarClaveComponent } from './recuperar-clave/recuperar-clave.component';
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   {
     path:'login',
     component:LoginComponent
+  },
+  {
+    path:'register',
+    component:RegisterComponent
   },
   {
     path:'cambiar-clave',
