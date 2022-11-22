@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ValidadorSesionGuard } from 'src/app/guardianes/validador-sesion.guard';
 import { BuscarClienteComponent } from './clientes/buscar-cliente/buscar-cliente.component';
 import { CrearClienteComponent } from './clientes/crear-cliente/crear-cliente.component';
 import { EditarClienteComponent } from './clientes/editar-cliente/editar-cliente.component';
@@ -12,35 +13,43 @@ import { EliminarEmpleadoComponent } from './empleados/eliminar-empleado/elimina
 const routes: Routes = [
   {
     path:'crear-empleado',
-    component:CrearEmpleadoComponent
+    component:CrearEmpleadoComponent,
+    canActivate:[ValidadorSesionGuard]
   },
   {
     path:'editar-empleado',
-    component:EditarEmpleadoComponent
+    component:EditarEmpleadoComponent,
+    canActivate:[ValidadorSesionGuard]
   },
   {
     path:'eliminar-empleado',
-    component:EliminarEmpleadoComponent
+    component:EliminarEmpleadoComponent,
+    canActivate:[ValidadorSesionGuard]
   },
   {
     path:'buscar-empleado',
-    component:BuscarEmpleadoComponent
-  },  
+    component:BuscarEmpleadoComponent,
+    canActivate:[ValidadorSesionGuard]
+  },
   {
     path:'crear-cliente',
-    component:CrearClienteComponent
+    component:CrearClienteComponent,
+    canActivate:[ValidadorSesionGuard]
   },
   {
     path:'editar-cliente/:id',
-    component:EditarClienteComponent
+    component:EditarClienteComponent,
+    canActivate:[ValidadorSesionGuard]
   },
   {
     path:'eliminar-cliente/:id',
-    component:EliminarClienteComponent
+    component:EliminarClienteComponent,
+    canActivate:[ValidadorSesionGuard]
   },
   {
     path:'buscar-cliente',
-    component:BuscarClienteComponent
+    component:BuscarClienteComponent,
+    canActivate:[ValidadorSesionGuard]
   }
 
 ];

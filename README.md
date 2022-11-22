@@ -3,7 +3,14 @@
 
 ## `Angular` `materialize` `npm` `cryptojs` `Autenticacion token`
 
-# Autor:[`Jhonathan Rodriguez Ramirez`](https://github.com/jhonathan1522)
+# Autor:[`Nelson Andres Montealegre`](https://github.com/erre0uno)
+
+![intit](https://github.com/erre0uno/ProyectoMinticFront/blob/main/docu/init.png?raw=true)
+
+<br>
+
+![intit](https://github.com/erre0uno/ProyectoMinticFront/blob/main/docu/init2.png?raw=true)
+
 
 # AngularApi
 

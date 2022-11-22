@@ -12,7 +12,7 @@ export class AutenticacionService {
   url:string='http://localhost:3000';
   dataEnSesion = new BehaviorSubject<ModelUser>(new ModelUser());
 
-  constructor( private http:HttpClient ) { 
+  constructor( private http:HttpClient ) {
     this.verificarSesion();
   }
 
@@ -24,11 +24,11 @@ export class AutenticacionService {
   }
 
   refrescarDatosSession(datos:ModelUser){
-    this.dataEnSesion.next(datos); 
+    this.dataEnSesion.next(datos);
   }
 
   validaruser(usuario:string, clave:string):Observable<ModelUser>{
-    return this.http.post<ModelUser>(`${this.url}/identificarCliente`, {
+    return this.http.post<ModelUser>(`${this.url}/clientes/identificarCliente`, {
       usuario:usuario,
       clave:clave
     });
@@ -74,6 +74,15 @@ export class AutenticacionService {
     }else{
       return '';
     }
+  }
+
+  obtenerInformacionSesion(){
+    let datosString = localStorage.getItem("dataSesion");
+    console.log("datosString" + datosString);
+    if(datosString)
+      return JSON.parse(datosString);
+    else
+      return null;
   }
 
 
