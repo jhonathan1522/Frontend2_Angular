@@ -29,8 +29,8 @@ export class AutenticacionService {
 
   validaruser(usuario:string, clave:string):Observable<ModelUser>{
     return this.http.post<ModelUser>(`${this.url}/clientes/identificarCliente`, {
-      usuario:usuario,
-      clave:clave
+      Usuario:usuario,
+      Clave:clave
     });
   }
 
