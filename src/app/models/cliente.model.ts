@@ -6,4 +6,5 @@ export class Modelcliente{
     Telefono?: String;
     Email?: String;
     Clave?: String;
+    Usuario?: String;
 }
