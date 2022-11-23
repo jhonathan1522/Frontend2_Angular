@@ -10,6 +10,7 @@ import { ClienteService } from 'src/app/services/cliente.service';
 export class BuscarClienteComponent implements OnInit {
 
   ListaClientes:Modelcliente[]=[];
+  public busqueda:any;
 
   constructor(private clienteServicio:ClienteService) { }
 

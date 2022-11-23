@@ -11,6 +11,7 @@ import { EditarEmpleadoComponent } from './empleados/editar-empleado/editar-empl
 import { EliminarEmpleadoComponent } from './empleados/eliminar-empleado/eliminar-empleado.component';
 import { BuscarEmpleadoComponent } from './empleados/buscar-empleado/buscar-empleado.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SearchPipe } from './clientes/pipes/search.pipe';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CrearEmpleadoComponent,
     EditarEmpleadoComponent,
     EliminarEmpleadoComponent,
-    BuscarEmpleadoComponent
+    BuscarEmpleadoComponent,
+    SearchPipe
   ],
   imports: [
     CommonModule,
